@@ -26,12 +26,12 @@ app.get("/", (req, res) => {
 });
 
 app.use("/properties", propertyRoutes);
-app.use("leases", leaseRoutes);
+app.use("/leases", leaseRoutes);
 app.use("/tenants", authMiddleware(["tenant"]), tenantRoutes);
 app.use("/managers", authMiddleware(["manager"]), managerRoutes);
 app.use("/applications", applicationRoutes);
 
-const port = process.env.PORT || 3002;
-app.listen(port, () => {
+const port = Number(process.env.PORT) || 3002;
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server running on port ${port}`);
 });

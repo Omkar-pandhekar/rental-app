@@ -60,7 +60,7 @@ const Navbar = () => {
               <div className="text-xl font-bold">
                 RENT
                 <span className="text-orange-500 font-light hover:!text-zinc-300">
-                  IFUL
+                  EASE
                 </span>
               </div>
             </div>

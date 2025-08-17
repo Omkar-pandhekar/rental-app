@@ -56,14 +56,14 @@ const HeroSection = () => {
         className="object-cover object-center"
         priority
       />
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute top-1/3 transform -translate-x-1/2 -translate-y-1/2 text-center w-full"
+        className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center"
       >
-        <div className="max-w-4xl mx-auto px-16 sm:px-12">
+        <div className="w-full max-w-4xl px-16 sm:px-12">
           <h1 className="text-5xl font-bold text-white mb-4">
             Start your journey to finding the perfect place to call home
           </h1>
@@ -82,7 +82,7 @@ const HeroSection = () => {
             />
             <Button
               onClick={handleLocationSearch}
-              className="bg-secondary-500 text-white rounded-none rounded-r-xl border-none hover:bg-secondary-600 h-12"
+              className="bg-orange-500 text-white rounded-none rounded-r-xl border-none hover:bg-secondary-600 h-12"
             >
               Search
             </Button>
